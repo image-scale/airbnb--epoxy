@@ -68,3 +68,37 @@
 - [ ] SimpleDirectAdapter exposes all DirectAdapter mutations as public methods
 - [ ] ControllerAdapter receives model lists from ListController and forwards change notifications
 - [ ] ControllerAdapter enforces that models are built through the controller, not modified directly
+
+## Task 3: Annotation definitions for model attributes, views, and package configuration
+
+### Acceptance Criteria
+- [ ] ModelAttribute has FIELD target and CLASS retention with value() returning Option[] defaulting to empty
+- [ ] ModelAttribute.Option enum defines NoGetter, NoSetter, DoNotHash, IgnoreRequireHashCode, DoNotUseInToString
+- [ ] ViewModelSpec has TYPE target and CLASS retention
+- [ ] ViewModelSpec.Size enum defines NONE, MANUAL, and four width/height size combinations
+- [ ] ViewModelSpec has autoLayout(), defaultLayout(), baseModelClass(), saveViewState(), fullSpan() elements
+- [ ] ModelProperty has METHOD and FIELD targets with CLASS retention
+- [ ] ModelProperty.Option enum defines DoNotHash, IgnoreRequireHashCode, GenerateStringOverloads, NullOnRecycle
+- [ ] ModelProperty has options(), defaultValue(), group() elements with correct defaults
+- [ ] TextProperty has METHOD and FIELD targets, CLASS retention, and defaultRes() element
+- [ ] CallbackProperty is a marker annotation on METHOD and FIELD with CLASS retention
+- [ ] AfterPropertiesSet is a marker annotation on METHOD with CLASS retention
+- [ ] OnRecycled is a marker annotation on METHOD with CLASS retention
+- [ ] VisibilityChanged is a marker annotation on METHOD with CLASS retention
+- [ ] VisibilityStateChanged is a marker annotation on METHOD with CLASS retention
+- [ ] AutoModel is a marker annotation on FIELD with CLASS retention
+- [ ] GeneratedModelClass has TYPE target and CLASS retention with layout() defaulting to 0
+- [ ] DataBindingLayouts has TYPE target and CLASS retention with value() int[] and enableDoNotHash() defaulting to true
+- [ ] DataBindingPattern has TYPE target and CLASS retention with rClass(), layoutPrefix(), and enableDoNotHash()
+- [ ] PackageConfig has TYPE target and CLASS retention with requireHashCode, requireAbstractModels, implicitlyAddAutoModels
+- [ ] PackageViewConfig has TYPE target and CLASS retention with rClass(), defaultLayoutPattern(), defaultBaseModelClass()
+- [ ] PackageViewConfig.Option enum defines Default, Enabled, Disabled
+- [ ] PackageViewConfig has generatedModelSuffix() defaulting to "Model_"
+- [ ] PackageViewConfig has disableGenerateBuilderOverloads, disableGenerateGetters, disableGenerateReset options
+- [ ] ViewModelSpec.Size enum has exactly 6 constants with correct names
+- [ ] ModelAttribute.Option enum has exactly 5 constants with correct names
+- [ ] ModelProperty.Option enum has exactly 4 constants with correct names
+- [ ] PackageViewConfig.Option enum has exactly 3 constants with correct names
+- [ ] All annotation elements with Class<?> type use Void.class as sentinel default
+- [ ] All annotation elements with String type use "" as sentinel default
+- [ ] Annotations can be applied to test classes/fields/methods and compile successfully
