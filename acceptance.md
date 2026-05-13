@@ -170,3 +170,37 @@
 - [ ] SimpleController.setModels with empty list clears all models
 - [ ] All typed controllers can be used with ControllerAdapter
 - [ ] TypedController correctly diffs when data changes produce different models
+
+## Task 6: Touch interaction support for drag-and-drop reordering and swipe-to-dismiss
+
+### Acceptance Criteria
+- [x] TouchDirection defines UP, DOWN, LEFT, RIGHT as bit-flag constants
+- [x] TouchDirection.VERTICAL combines UP and DOWN
+- [x] TouchDirection.HORIZONTAL combines LEFT and RIGHT
+- [x] TouchDirection.ALL combines all four directions
+- [x] DragCallback defines onDragStarted, onModelMoved, onDragReleased, clearView
+- [x] SwipeCallback defines onSwipeStarted, onSwipeCompleted, onSwipeReleased, clearView
+- [x] TouchHandler takes a ListController and target model class
+- [x] TouchHandler.isDragEnabled returns true for matching model types
+- [x] TouchHandler.isSwipeEnabled returns true for matching model types
+- [x] TouchHandler filters by target model class including subclasses
+- [x] TouchHandler.handleDragMove calls controller.moveModel and dispatches onModelMoved
+- [x] TouchHandler dispatches drag lifecycle events to DragCallback
+- [x] TouchHandler dispatches swipe lifecycle events to SwipeCallback
+- [x] TouchHelper.initDragging returns a drag builder chain
+- [x] TouchHelper drag builder sets controller reference
+- [x] TouchHelper drag builder supports forVerticalList, forHorizontalList, forGrid direction presets
+- [x] TouchHelper drag builder supports withTarget for model class filtering
+- [x] TouchHelper drag builder supports forAllModels
+- [x] TouchHelper drag builder andCallbacks completes the chain and returns a TouchHandler
+- [x] TouchHelper.initSwiping returns a swipe builder chain
+- [x] TouchHelper swipe builder supports left, right, leftAndRight direction presets
+- [x] TouchHelper swipe builder supports withTarget for model class filtering
+- [x] TouchHelper swipe builder andCallbacks completes the chain and returns a TouchHandler
+- [x] DragCallbacks abstract class provides no-op defaults except onModelMoved
+- [x] SwipeCallbacks abstract class provides no-op defaults except onSwipeCompleted
+- [x] DragCallbacks.isDragEnabledForModel defaults to true
+- [x] SwipeCallbacks.isSwipeEnabledForModel defaults to true
+- [x] TouchHandler tracks currently dragged model
+- [x] TouchHandler tracks currently swiped model
+- [x] TouchHandler supports multiple target model classes via withTargets

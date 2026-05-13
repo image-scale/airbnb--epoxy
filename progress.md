@@ -35,3 +35,10 @@
 **Commit**: Add typed controllers for data-driven model building and a simple pre-built model list controller
 **Acceptance**: 30/30 criteria met
 **Verification**: tests FAIL on previous state (compilation errors — test file depends on typed controller classes), PASS on current state (229 tests total)
+
+## Round 6
+**Task**: Task 6 — Touch interaction support for drag-and-drop reordering and swipe-to-dismiss
+**Files created**: src/main/java/dev/epoxy/{TouchDirection,DragCallback,SwipeCallback,TouchHandler,TouchHelper}.java, src/test/java/dev/epoxy/TouchHelperTest.java
+**Commit**: Add touch interaction support with builder API for drag-and-drop and swipe-to-dismiss
+**Acceptance**: 30/30 criteria met
+**Verification**: tests FAIL on previous state (compilation errors — test file depends on touch classes), PASS on current state (275 tests total)
