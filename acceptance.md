@@ -102,3 +102,37 @@
 - [ ] All annotation elements with Class<?> type use Void.class as sentinel default
 - [ ] All annotation elements with String type use "" as sentinel default
 - [ ] Annotations can be applied to test classes/fields/methods and compile successfully
+
+## Task 4: Model groups for compositing multiple child models into a single list item
+
+### Acceptance Criteria
+- [ ] ModelGroup wraps multiple child models into a single item with a layout ID
+- [ ] ModelGroup defaults its ID to the first child model's ID
+- [ ] ModelGroup delegates bind to all child models via ModelGroupHolder
+- [ ] ModelGroup delegates unbind to all child models
+- [ ] ModelGroup.bind with previousModel passes matching child for incremental binding
+- [ ] ModelGroup.bind with previousModel uses fresh bind for non-matching children
+- [ ] ModelGroup.equals includes child models list in comparison
+- [ ] ModelGroup.hashCode includes child models list
+- [ ] ModelGroup.getSpanSize delegates to first child model
+- [ ] ModelGroup.shouldSaveViewState returns true if any child has it
+- [ ] ModelGroup supports explicit ID override after construction
+- [ ] ModelGroup.getChildModels returns unmodifiable list of children
+- [ ] ModelGroupHolder creates child holders matching each child model's view type
+- [ ] ModelGroupHolder reuses existing child holders when view types match on rebind
+- [ ] ModelGroupHolder recycles excess holders when new group has fewer children
+- [ ] ModelGroupHolder replaces holders when child view types change
+- [ ] ModelGroupHolder.unbindGroup unbinds all children and clears state
+- [ ] ModelGroup supports addModel for incremental child construction
+- [ ] ModelGroup supports both varargs and collection constructors
+- [ ] ModelGroup child visibility is tracked during bind
+- [ ] ModelGroup correctly diffs when used with a ListController
+- [ ] ModelGroup reports content change when any child's content changes
+- [ ] ModelGroup reports no change when all children are identical
+- [ ] ModelGroupHolder.getChildCount returns the number of child holders
+- [ ] ModelGroupHolder.getChildHolder returns holder at given index
+- [ ] ModelGroup throws on construction with empty model collection
+- [ ] ItemModel.createView returns a default Object for view creation
+- [ ] ModelGroup.createView returns a ModelGroupHolder instance
+- [ ] ModelGroup bind correctly handles more children than previous group
+- [ ] ModelGroup bind correctly handles fewer children than previous group

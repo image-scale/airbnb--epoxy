@@ -20,3 +20,11 @@
 **Commit**: Add annotation definitions for model attributes, view bindings, lifecycle hooks, and package configuration
 **Acceptance**: 30/30 criteria met
 **Verification**: tests FAIL on previous state (compilation errors — test file depends on annotation classes), PASS on current state (174 tests total)
+
+## Round 4
+**Task**: Task 4 — Model groups for compositing multiple child models into a single list item
+**Files created**: src/main/java/dev/epoxy/{ModelGroup,ModelGroupHolder}.java, src/test/java/dev/epoxy/ModelGroupTest.java
+**Files modified**: src/main/java/dev/epoxy/ItemModel.java (added createView() method)
+**Commit**: Add model groups for compositing multiple child models into a single list item
+**Acceptance**: 30/30 criteria met
+**Verification**: tests FAIL on previous state (compilation errors — test file depends on ModelGroup/ModelGroupHolder), PASS on current state (205 tests total)

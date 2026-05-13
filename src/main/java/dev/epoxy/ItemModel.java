@@ -118,6 +118,10 @@ public abstract class ItemModel<T> {
         return false;
     }
 
+    public Object createView() {
+        return new Object();
+    }
+
     public void addTo(ListController controller) {
         controller.addInternal(this);
     }
