@@ -8,6 +8,6 @@ Implement the core Epoxy library top-down, starting with the most important user
 - [x] Task 2: Implement the list adapter with view holder management and view type mapping — Create an adapter that manages view holders, maps view types to model classes, saves/restores view state, and dispatches model lifecycle events. Include both a direct-manipulation adapter (where users modify models list directly and call notify methods) and a controller-backed adapter that integrates with the diff algorithm for automatic updates.
 - [x] Task 3: Implement annotation definitions for model attributes, views, and package configuration
 - [x] Task 4: Implement model groups for compositing multiple child models into a single list item
-- [>] Task 5: Implement typed controllers for data-driven model building with 1-4 type parameters
-- [ ] Task 6: Implement touch interaction support for drag-and-drop reordering and swipe-to-dismiss
+- [x] Task 5: Implement typed controllers for data-driven model building with 1-4 type parameters
+- [>] Task 6: Implement touch interaction support for drag-and-drop reordering and swipe-to-dismiss
 - [ ] Task 7: Implement visibility tracking to monitor item visibility state changes during scrolling

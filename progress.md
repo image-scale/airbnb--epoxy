@@ -28,3 +28,10 @@
 **Commit**: Add model groups for compositing multiple child models into a single list item
 **Acceptance**: 30/30 criteria met
 **Verification**: tests FAIL on previous state (compilation errors — test file depends on ModelGroup/ModelGroupHolder), PASS on current state (205 tests total)
+
+## Round 5
+**Task**: Task 5 — Typed controllers for data-driven model building with 1-4 type parameters
+**Files created**: src/main/java/dev/epoxy/{TypedController,Typed2Controller,Typed3Controller,Typed4Controller,SimpleController}.java, src/test/java/dev/epoxy/TypedControllerTest.java
+**Commit**: Add typed controllers for data-driven model building and a simple pre-built model list controller
+**Acceptance**: 30/30 criteria met
+**Verification**: tests FAIL on previous state (compilation errors — test file depends on typed controller classes), PASS on current state (229 tests total)

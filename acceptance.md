@@ -136,3 +136,37 @@
 - [ ] ModelGroup.createView returns a ModelGroupHolder instance
 - [ ] ModelGroup bind correctly handles more children than previous group
 - [ ] ModelGroup bind correctly handles fewer children than previous group
+
+## Task 5: Typed controllers for data-driven model building with 1-4 type parameters
+
+### Acceptance Criteria
+- [ ] TypedController<T> extends ListController with setData(T) triggering rebuild
+- [ ] TypedController<T>.buildModels(T) receives the data set via setData
+- [ ] TypedController<T>.requestModelBuild() throws when called outside setData
+- [ ] TypedController<T>.getCurrentData() returns the last set data or null
+- [ ] TypedController<T>.setData is final
+- [ ] Typed2Controller<T,U> extends ListController with setData(T,U)
+- [ ] Typed2Controller<T,U>.buildModels(T,U) receives both data parameters
+- [ ] Typed3Controller<T,U,V> extends ListController with setData(T,U,V)
+- [ ] Typed3Controller<T,U,V>.buildModels(T,U,V) receives all three parameters
+- [ ] Typed4Controller<T,U,V,W> extends ListController with setData(T,U,V,W)
+- [ ] Typed4Controller<T,U,V,W>.buildModels(T,U,V,W) receives all four parameters
+- [ ] All typed controllers lock requestModelBuild outside setData
+- [ ] All typed controllers override buildModels() as final delegate
+- [ ] SimpleController accepts pre-built model lists via setModels()
+- [ ] SimpleController.buildModels() adds all models from setModels list
+- [ ] SimpleController.requestModelBuild() throws when called outside setModels
+- [ ] setData always triggers rebuild even with identical data
+- [ ] TypedController works with ListChangeObserver for diff notifications
+- [ ] TypedController supports interceptors added before setData
+- [ ] TypedController supports build listeners
+- [ ] Typed2Controller correctly passes both data values to typed buildModels
+- [ ] Typed3Controller correctly passes all three data values to typed buildModels
+- [ ] Typed4Controller correctly passes all four data values to typed buildModels
+- [ ] SimpleController dispatches diff operations when model list changes
+- [ ] Multiple setData calls each trigger a rebuild
+- [ ] TypedController data starts as null before first setData call
+- [ ] TypedController.moveModel temporarily allows requestModelBuild
+- [ ] SimpleController.setModels with empty list clears all models
+- [ ] All typed controllers can be used with ControllerAdapter
+- [ ] TypedController correctly diffs when data changes produce different models
