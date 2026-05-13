@@ -42,3 +42,10 @@
 **Commit**: Add touch interaction support with builder API for drag-and-drop and swipe-to-dismiss
 **Acceptance**: 30/30 criteria met
 **Verification**: tests FAIL on previous state (compilation errors — test file depends on touch classes), PASS on current state (275 tests total)
+
+## Round 7
+**Task**: Task 7 — Visibility tracking to monitor item visibility state changes during scrolling
+**Files created**: src/main/java/dev/epoxy/{VisibilityState,VisibilityItem,VisibilityTracker,OnModelVisibilityStateChangedListener,OnModelVisibilityChangedListener}.java, src/test/java/dev/epoxy/VisibilityTrackerTest.java
+**Commit**: Add visibility tracking with state transitions, percentage calculations, and configurable thresholds
+**Acceptance**: 30/30 criteria met
+**Verification**: tests FAIL on previous state (compilation errors — test file depends on visibility classes), PASS on current state (323 tests total)

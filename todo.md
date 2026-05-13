@@ -10,4 +10,4 @@ Implement the core Epoxy library top-down, starting with the most important user
 - [x] Task 4: Implement model groups for compositing multiple child models into a single list item
 - [x] Task 5: Implement typed controllers for data-driven model building with 1-4 type parameters
 - [x] Task 6: Implement touch interaction support for drag-and-drop reordering and swipe-to-dismiss
-- [>] Task 7: Implement visibility tracking to monitor item visibility state changes during scrolling
+- [x] Task 7: Implement visibility tracking to monitor item visibility state changes during scrolling

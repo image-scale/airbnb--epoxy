@@ -204,3 +204,37 @@
 - [x] TouchHandler tracks currently dragged model
 - [x] TouchHandler tracks currently swiped model
 - [x] TouchHandler supports multiple target model classes via withTargets
+
+## Task 7: Visibility tracking to monitor item visibility state changes during scrolling
+
+### Acceptance Criteria
+- [x] VisibilityState defines VISIBLE = 0
+- [x] VisibilityState defines INVISIBLE = 1
+- [x] VisibilityState defines FOCUSED_VISIBLE = 2
+- [x] VisibilityState defines UNFOCUSED_VISIBLE = 3
+- [x] VisibilityState defines FULL_IMPRESSION_VISIBLE = 4
+- [x] VisibilityState defines PARTIAL_IMPRESSION_VISIBLE = 5
+- [x] VisibilityState defines PARTIAL_IMPRESSION_INVISIBLE = 6
+- [x] VisibilityItem.update() stores dimensions and returns true if height > 0 and width > 0
+- [x] VisibilityItem calculates percentVisibleHeight as visibleHeight/height * 100
+- [x] VisibilityItem calculates percentVisibleWidth as visibleWidth/width * 100
+- [x] VisibilityItem.handleVisible dispatches VISIBLE when becoming visible
+- [x] VisibilityItem.handleVisible dispatches INVISIBLE when becoming invisible
+- [x] VisibilityItem.handleFocus dispatches FOCUSED_VISIBLE when item enters focus range
+- [x] VisibilityItem.handleFocus dispatches UNFOCUSED_VISIBLE when item exits focus range
+- [x] Focus range: item area >= half viewport requires visible area >= half viewport; smaller items must be fully visible
+- [x] VisibilityItem.handleFullImpression dispatches FULL_IMPRESSION_VISIBLE when fully visible
+- [x] VisibilityItem.handlePartialImpression dispatches PARTIAL_IMPRESSION_VISIBLE when exceeding threshold
+- [x] VisibilityItem.handlePartialImpression dispatches PARTIAL_IMPRESSION_INVISIBLE when dropping below threshold
+- [x] isPartiallyVisible with threshold 0 falls back to isVisible check
+- [x] VisibilityItem.handleChanged deduplicates and skips dispatch when values unchanged
+- [x] VisibilityItem.reset() clears all tracking state and sets new adapter position
+- [x] VisibilityItem.shiftBy adjusts adapter position by offset
+- [x] VisibilityTracker processes items and dispatches onVisibilityStateChanged to models
+- [x] VisibilityTracker processes items and dispatches onVisibilityChanged to models
+- [x] VisibilityTracker.onChangedEnabled controls whether onVisibilityChanged is dispatched
+- [x] VisibilityTracker.partialImpressionThreshold configures partial visibility percentage
+- [x] VisibilityTracker.clear() removes all tracked items
+- [x] OnModelVisibilityStateChangedListener receives state change events with model, view, and state
+- [x] OnModelVisibilityChangedListener receives change events with model, view, percentages, and pixel dimensions
+- [x] ItemModel.onVisibilityStateChanged and onVisibilityChanged are called during visibility processing
